@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+	</Appenders>
+	<Loggers>
+		<Root level="fatal">
+			<AppenderRef ref="Console" />
+		</Root>
+		
+		<!-- INFO 레벨 로그만 별도 파일에 저장 -->
+        <Logger name="kr.ac.kku.cs.wp.wsd" level="trace" additivity="false">
+           <AppenderRef ref="Console" />
+        </Logger>
+	</Loggers>
+</Configuration>

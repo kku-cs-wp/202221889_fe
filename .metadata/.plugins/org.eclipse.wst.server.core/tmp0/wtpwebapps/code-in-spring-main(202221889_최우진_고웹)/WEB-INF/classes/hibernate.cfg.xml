@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+    
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/cswp_202221889_db</property>
+        <property name="hibernate.connection.username">cswp_202221889_fe</property>
+        <property name="hibernate.connection.password">202221889</property>
+
+        <!-- HikariCP specific settings -->
+        <property name="hibernate.hikari.maximumPoolSize">10</property>
+        <property name="hibernate.hikari.minimumIdle">5</property>
+        <property name="hibernate.hikari.idleTimeout">300000</property>
+        <property name="hibernate.hikari.maxLifetime">1800000</property>
+        <property name="hibernate.hikari.connectionTimeout">30000</property>
+        <property name="hibernate.hikari.poolName">MyHikariCP</property>
+        
+        <!-- Disable autocommit -->
+        <property name="hibernate.connection.autocommit">false</property>
+
+        <!-- Hibernate properties -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>       <!-- Formats SQL for readability -->
+		<property name="hibernate.use_sql_comments">true</property> <!-- Adds comments for better tracking -->
+        
+        
+        <!-- Entity class mappings -->
+        <property name="entity.package.scan">kr.ac.kku.cs.wp.wsd</property>
+        
+        
+    </session-factory>
+</hibernate-configuration>

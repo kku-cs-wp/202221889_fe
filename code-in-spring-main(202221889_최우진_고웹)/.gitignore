@@ -1,0 +1,26 @@
+# Eclipse specific files
+/.settings/
+/.project
+/.classpath
+
+# Intellij specific files
+/.idea/
+/*.iml
+
+# Maven target directory
+/target/
+
+# Logs
+*.log
+
+# Compiled class files
+*.class
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# OS-specific files
+.DS_Store
+Thumbs.db
